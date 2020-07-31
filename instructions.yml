@@ -1,0 +1,30 @@
+- hosts: localhost
+  become: true
+  roles:
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: cristoto
+          oh_my_zsh:
+            theme: agnoster
+            plugins:
+              - git
+    - role: ansible-galaxy install geerlingguy.nodejs
+    - role: fubarhouse.yarn
+    - role: geerlingguy.docker
+    - role: virtualbox
+  tasks:
+    - name: Install necesaries programs
+      apt: name={{item}}
+      with_items:
+        - curl
+        - git
+        - flamerobin
+
+    - name: Install all snaps programs
+      snap: name={{item}}
+      with_items:
+        - dbeaver-ce
+        - keepassxc
+        - teams-for-linux
+        - code
+        - firefox
