@@ -12,6 +12,53 @@
     - role: oefenweb.yarn
     - role: geerlingguy.docker
     - role: oefenweb.virtualbox
+    - role: gantsign.visual-studio-code
+      users:
+        - username: cristoto
+          visual_studio_code_extensions:
+            - ms-azuretools.vscode-docker
+            - coenraads.bracket-pair-colorizer
+            - dbaeumer.vscode-eslint
+            - eamodio.gitlens
+            - prisma.vscode-graphql
+            - kumar-harsh.graphql-for-vscode
+            - xabikos.javascriptsnippets
+            - yzhang.markdown-all-in-one
+            - esbenp.prettier-vscode
+            - alduncanson.react-hooks-snippets
+            - gruntfuggly.todo-tree
+            - redhat.vscode-yaml
+          visual_studio_code_settings_overwrite: yes
+          visual_studio_code_settings:
+            {
+              "window.zoomLevel": 0,
+              "typescript.updateImportsOnFileMove.enabled": "always",
+              "javascript.updateImportsOnFileMove.enabled": "always",
+              "terminal.integrated.fontFamily": "monospace",
+              "editor.fontFamily": "Fira Code",
+              "editor.fontLigatures": true,
+              "editor.fontWeight": "400",
+              "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+              "eslint.validate":
+                [
+                  "javascript",
+                  "javascriptreact",
+                  "typescript",
+                  "typescriptreact",
+                ],
+              "editor.formatOnSave": true,
+              "[javascript]": { "editor.formatOnSave": false },
+              "[javascriptreact]": { "editor.formatOnSave": false },
+              "[typescript]":
+                {
+                  "editor.formatOnSave": false,
+                  "editor.defaultFormatter": "esbenp.prettier-vscode",
+                },
+              "[typescriptreact]": { "editor.formatOnSave": false },
+              "todo-tree.tree.showScanModeButton": false,
+              "diffEditor.ignoreTrimWhitespace": true,
+              "explorer.confirmDelete": false,
+            }
 
   tasks:
     - name: Install necesaries programs
@@ -28,8 +75,3 @@
         - dbeaver-ce
         - keepassxc
         - teams-for-linux
-
-    - name: Install Visual Studio Code with classic argument
-      snap:
-        name: code
-        classic: yes

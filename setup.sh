@@ -21,6 +21,7 @@ ansible-galaxy install geerlingguy.nodejs
 ansible-galaxy install oefenweb.yarn
 ansible-galaxy install geerlingguy.docker
 ansible-galaxy install oefenweb.virtualbox
+ansible-galaxy install gantsign.visual-studio-code
 
 # Run ansible playbook
 sudo ansible-playbook instructions.yml
