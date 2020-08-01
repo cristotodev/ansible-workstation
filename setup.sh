@@ -7,6 +7,13 @@ if [ "$(dpkg -l | awk '/ansible/ {print }'|wc -l)" -lt 1 ]; then
     exit 1
 fi
 
+# Check if snap is install
+if [ "$(dpkg -l | awk '/snap/ {print }'|wc -l)" -lt 1 ]; then
+    echo "You need snap installed to use this script."
+    echo "To install snap use the following command: sudo apt update -y && sudo apt install -y snapd"
+    exit 1
+fi
+
 # Install all necesaries roles
 ansible-galaxy install gantsign.oh-my-zsh
 ansible-galaxy install gantsign.antigen
