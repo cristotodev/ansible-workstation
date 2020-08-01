@@ -1,5 +1,11 @@
 # !/bin/bash
 
+USER=$1
+if [ -z "$USER" ]; then
+    echo "You must pass the username. Ex: ./setup test"
+    exit 1;
+fi
+
 # Check if ansible is install
 if [ "$(dpkg -l | awk '/ansible/ {print }'|wc -l)" -lt 1 ]; then
     echo "You need ansible to use this script."
@@ -24,4 +30,4 @@ ansible-galaxy install oefenweb.virtualbox
 ansible-galaxy install gantsign.visual-studio-code
 
 # Run ansible playbook
-sudo ansible-playbook instructions.yml
+sudo ansible-playbook --extra-vars "user=$USER" instructions.yml
