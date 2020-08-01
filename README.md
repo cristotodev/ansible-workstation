@@ -36,3 +36,4 @@ The following list shows all the roles used in the playbook.
 - [Yarn](https://github.com/Oefenweb/ansible-yarn)
 - [Docker](https://github.com/geerlingguy/ansible-role-docker)
 - [Virtualbox](https://github.com/Oefenweb/ansible-virtualbox)
+- [Visual Studio Code](https://github.com/gantsign/ansible-role-visual-studio-code)
