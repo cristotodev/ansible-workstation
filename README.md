@@ -6,6 +6,8 @@ This repository contains [Ansible](http://docs.ansible.com/) instructions for se
 
 To use this repository you must [install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
+The version of ansible must be 2.8 or higher.
+
 ## Quick Start
 
 Set execution permission to setup.sh file.

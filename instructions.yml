@@ -21,22 +21,11 @@
         - git
         - flamerobin
 
-    - name: Install Mozilla Firefox
-      snap:
-        name: firefox
-
-    - name: Install dbeaver-ce
-      snap:
-        name: dbeaver-ce
-
-    - name: Install keepassxc
-      snap:
-        name: keepassxc
-
-    - name: Install Microsoft Teams
-      snap:
-        name: teams-for-linux
-
-    - name: Install Visual Studio Code
-      snap:
-        name: code
+    - name: Install programs from snaps
+      snap: name={{item}}
+      with_items:
+        - firefox
+        - dbeaver-ce
+        - keepassxc
+        - teams-for-linux
+        - code
