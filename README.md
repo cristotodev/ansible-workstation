@@ -25,7 +25,7 @@ Run the setup script.
 ```bash
 ./setup.sh
 ```
-If at the end of the script the applications do not appear in the applications menu, restart the PC.
+When the script is finished, the system must be restarted so that all changes are applied correctly.
 
 ### Roles repositories
 
