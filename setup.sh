@@ -23,4 +23,4 @@ ansible-galaxy install geerlingguy.docker
 ansible-galaxy install oefenweb.virtualbox
 
 # Run ansible playbook
-ansible-playbook instructions.yml
+sudo ansible-playbook instructions.yml
