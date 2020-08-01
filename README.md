@@ -20,10 +20,10 @@ Set execution permission to setup.sh file.
 chmod +x setup.sh username
 ```
 
-Run the setup script.
+Run the script with your username
 
 ```bash
-./setup.sh
+./setup.sh [user]
 ```
 When the script is finished, the system must be restarted so that all changes are applied correctly.
 
