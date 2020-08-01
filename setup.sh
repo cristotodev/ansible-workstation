@@ -8,6 +8,7 @@ if [ "$(dpkg -l | awk '/ansible/ {print }'|wc -l)" -lt 1 ]; then
 fi
 
 # Install all necesaries roles
+ansible-galaxy install gantsign.oh-my-zsh
 ansible-galaxy install gantsign.antigen
 ansible-galaxy install geerlingguy.nodejs
 ansible-galaxy install oefenweb.yarn

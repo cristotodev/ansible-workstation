@@ -8,10 +8,11 @@
             theme: agnoster
             plugins:
               - git
-    - role: ansible-galaxy install geerlingguy.nodejs
-    - role: fubarhouse.yarn
+    - role: geerlingguy.nodejs
+    - role: oefenweb.yarn
     - role: geerlingguy.docker
-    - role: virtualbox
+    - role: oefenweb.virtualbox
+
   tasks:
     - name: Install necesaries programs
       apt: name={{item}}
@@ -20,11 +21,22 @@
         - git
         - flamerobin
 
-    - name: Install all snaps programs
-      snap: name={{item}}
-      with_items:
-        - dbeaver-ce
-        - keepassxc
-        - teams-for-linux
-        - code
-        - firefox
+    - name: Install Mozilla Firefox
+      snap:
+        name: firefox
+
+    - name: Install dbeaver-ce
+      snap:
+        name: dbeaver-ce
+
+    - name: Install keepassxc
+      snap:
+        name: keepassxc
+
+    - name: Install Microsoft Teams
+      snap:
+        name: teams-for-linux
+
+    - name: Install Visual Studio Code
+      snap:
+        name: code
