@@ -28,4 +28,8 @@
         - dbeaver-ce
         - keepassxc
         - teams-for-linux
-        - code
+
+    - name: Install Visual Studio Code with classic argument
+      snap:
+        name: code
+        classic: yes
