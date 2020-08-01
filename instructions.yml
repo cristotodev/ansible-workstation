@@ -3,7 +3,7 @@
   roles:
     - role: gantsign.oh-my-zsh
       users:
-        - username: "{ { user } }"
+        - username: "{{ user }}"
           oh_my_zsh:
             theme: agnoster
             plugins:
@@ -14,7 +14,7 @@
     - role: oefenweb.virtualbox
     - role: gantsign.visual-studio-code
       users:
-        - username: "{ { user } }"
+        - username: "{{ user }}"
           visual_studio_code_extensions:
             - ms-azuretools.vscode-docker
             - coenraads.bracket-pair-colorizer
