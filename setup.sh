@@ -2,7 +2,7 @@
 
 USER=$1
 if [ -z "$USER" ]; then
-    echo "\You must pass the username. Ex: ./setup test"
+    echo "You must pass the username. Ex: ./setup test"
     exit 1;
 fi
 
