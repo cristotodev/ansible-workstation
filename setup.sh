@@ -24,4 +24,4 @@ ansible-galaxy install oefenweb.virtualbox
 ansible-galaxy install gantsign.visual-studio-code
 
 # Run ansible playbook
-sudo ansible-playbook instructions.yml
+sudo ansible-playbook --extra-vars "username=cristoto" instructions.yml

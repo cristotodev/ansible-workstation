@@ -17,7 +17,7 @@ sudo apt update -y && sudo apt install -y snapd
 Set execution permission to setup.sh file.
 
 ```bash
-chmod +x setup.sh
+chmod +x setup.sh username
 ```
 
 Run the setup script.
